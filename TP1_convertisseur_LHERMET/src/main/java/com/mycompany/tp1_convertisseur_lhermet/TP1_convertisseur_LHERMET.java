@@ -18,6 +18,7 @@ public class TP1_convertisseur_LHERMET {
         sc= new Scanner(System.in );
         double deg;
         double TEMPERATURE;
+        double latempérature;
         System.out.println("Entre un nombre");
         deg=sc.nextDouble();
         TEMPERATURE=deg+273.15;
@@ -28,14 +29,41 @@ public class TP1_convertisseur_LHERMET {
                 +"FarenheitVersCelcius\n"
                 +"CelciusVersFarenheit\n"
                 +"FarenheitVersKelvin\n");
-        CelciusVersKelvin(TEMPERATURE);
-        KelvinVersCelcius(TEMPERATURE);
-        FarenheitVersCelcius(TEMPERATURE);
-        CelciusVersFarenheit(TEMPERATURE);
-        FarenheitVersKelvin(TEMPERATURE);
+        latempérature=sc.nextDouble();
+        if (latempérature==1){
+                TEMPERATURE=CelciusVersKelvin (latempérature);
+                System.out.println("Température en Kelvin vaut "+TEMPERATURE);
+        }
+        if (latempérature==2){
+                TEMPERATURE=KelvinVersCelcius(latempérature);
+                System.out.println("Température en Celcius vaut "+TEMPERATURE);
+        }
+        if (latempérature==3){
+                TEMPERATURE=FarenheitVersCelcius(latempérature);
+                System.out.println("Température en Celsus vaut "+TEMPERATURE);
+        }
+        if (latempérature==4){
+                TEMPERATURE=KelvinVersFarenheit(latempérature);
+                System.out.println("Température en farenheit vaut "+TEMPERATURE);
+        }
+        if (latempérature==5){
+                TEMPERATURE=CelciusVersFarenheit(latempérature);
+                System.out.println("Température en Farenheit vaut "+TEMPERATURE);
+        }
+        if (latempérature==6){
+                TEMPERATURE=FarenheitVersKelvin(latempérature);
+                System.out.println("Température en Kelvin vaut "+TEMPERATURE);
+        }
     
                 
-          }
+        
+                
+                
+        }
+        
+       
+                
+          
     
     public static double CelciusVersKelvin (double tCelcius) {
        double Kelvin;

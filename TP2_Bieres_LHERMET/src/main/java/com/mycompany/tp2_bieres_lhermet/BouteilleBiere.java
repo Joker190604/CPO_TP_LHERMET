@@ -37,6 +37,21 @@ public class BouteilleBiere {
         }
     
 }
+   
+    @Override
+        public String toString() {
+        String chaine_a_retourner;
+            String degreAlcool = null;
+            String nom = null;
+        chaine_a_retourner = nom + " (" + degreAlcool + " degrés) Ouverte ? "; 
+            boolean ouverte = false;
+        if (ouverte == true) {
+            chaine_a_retourner += "oui";
+        } else {
+            chaine_a_retourner += "non";
+        }
+        return chaine_a_retourner ;
+    }
 }
 
 

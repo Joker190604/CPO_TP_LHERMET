@@ -10,12 +10,14 @@ package com.mycompany.tp2_bieres_lhermet;
  */
 public class TP2_Bieres_LHERMET {
 
-    public static void main(String[] args) {
-        BouteilleBiere uneBiere = new BouteilleBiere("cuvée des trolls",7.0,"Dubuisson");
-        BouteilleBiere autreBiere = new BouteilleBiere("Leffe", 6.6 ,"Abbaye de Leffe");
-        
+    public static String main(String[] args) {
+        BouteilleBiere uneBiere = new BouteilleBiere("cuvée des trolls", 7.0, "Dubuisson");
+        BouteilleBiere autreBiere = new BouteilleBiere("Leffe", 6.6, "Abbaye de Leffe");
+        return null;
+       
 
 
-    }
+    
 
+}
 }

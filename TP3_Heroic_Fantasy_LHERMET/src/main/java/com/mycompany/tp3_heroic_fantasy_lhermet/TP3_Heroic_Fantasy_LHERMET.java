@@ -18,3 +18,5 @@ public class TP3_Heroic_Fantasy_LHERMET {
         Baton Baton2 =new Baton("Charme", 5, 6 );   
     }
 }
+
+ghp_3itz1viplvsfDPZS3GinqEmGKTTx3v3U9XPX

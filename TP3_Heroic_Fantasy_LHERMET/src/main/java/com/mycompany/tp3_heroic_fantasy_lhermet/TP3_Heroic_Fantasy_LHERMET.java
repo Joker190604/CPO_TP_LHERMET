@@ -29,12 +29,13 @@ public class TP3_Heroic_Fantasy_LHERMET {
         stuff.add(Epee2);
         stuff.add(Baton1);
         stuff.add(Baton2);
+        
         for(int i=0;i<stuff.size();i++){
             System.out.println(stuff.get(i));
         }
             
         magicien magicien1=new magicien("Gandalf",65,true);
-         magicien magicien2=new magicien("Garcimore",44,false);
+        magicien magicien2=new magicien("Garcimore",44,false);
         guerrier guerrier1 =new guerrier("Conan", 78, false );
         guerrier guerrier2 =new guerrier("Lannister", 45, true );  
         ArrayList<Personnage> team= new ArrayList<Personnage>();

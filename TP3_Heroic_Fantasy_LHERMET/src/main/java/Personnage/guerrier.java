@@ -4,6 +4,7 @@
  */
 package Personnage;
 
+import Armes.Armes;
 import Personnage.Personnage;
 
 /**
@@ -12,9 +13,10 @@ import Personnage.Personnage;
  */
  public class guerrier extends Personnage{ 
 boolean cheval;
-    public guerrier(String unNom, int unpv,boolean uncheval) {
-        super(unNom, unpv);
+    public guerrier(String unNom, int unpv,boolean uncheval, Armes unarmekip) {
+        super(unNom, unpv, unarmekip);
         cheval=uncheval;
+        
         
     }
 }

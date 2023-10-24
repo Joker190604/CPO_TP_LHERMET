@@ -4,6 +4,9 @@
  */
 package Personnage;
 
+import Armes.Armes;
+import java.util.ArrayList;
+
 /**
  *
  * @author sacha
@@ -15,10 +18,12 @@ abstract public class Personnage {
         return nom;
     }
     int pv;
-    
-public Personnage(String unNom,int unpv){
+    Armes armekip=null;
+       
+public Personnage(String unNom,int unpv, Armes unarmekip){
     nom=unNom;
     pv=unpv;
+    armekip=unarmekip;
      if (pv >100){
     System.out.println("tricheur");
     pv=2;
@@ -32,8 +37,20 @@ public String toString(){
     System.out.println("chaine_a_retourner");
     return chaine_a_retourner;
      
-    
 }
-}
-    
 
+ArrayList<Armes> stuff =new ArrayList<Armes>();
+ArrayList<Armes> unarmekip =new ArrayList<Armes>();
+
+        
+   public static void ajout (ArrayList<Armes> stuff, Armes nouvelle_arme){   
+
+    if (stuff.size()<4){
+
+        stuff.add(nouvelle_arme);
+    }
+   }
+}
+
+
+    

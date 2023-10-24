@@ -34,10 +34,10 @@ public class TP3_Heroic_Fantasy_LHERMET {
             System.out.println(stuff.get(i));
         }
             
-        magicien magicien1=new magicien("Gandalf",65,true);
-        magicien magicien2=new magicien("Garcimore",44,false);
-        guerrier guerrier1 =new guerrier("Conan", 78, false );
-        guerrier guerrier2 =new guerrier("Lannister", 45, true );  
+        magicien magicien1=new magicien("Gandalf",65,true,null);
+        magicien magicien2=new magicien("Garcimore",44,false,null);
+        guerrier guerrier1 =new guerrier("Conan", 78, false,null );
+        guerrier guerrier2 =new guerrier("Lannister", 45, true,null );  
         ArrayList<Personnage> team= new ArrayList<Personnage>();
         team.add(magicien1);
         team.add(magicien2);
@@ -49,7 +49,10 @@ public class TP3_Heroic_Fantasy_LHERMET {
         
         }
     }
-    }
+        
+   }
+
+
 
         
 

@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author sacha
  */
 abstract public class Personnage {
+    static int nbpersos=0;
     private String nom;
 
     public String getNom() {
@@ -21,10 +22,11 @@ abstract public class Personnage {
     Armes armekip=null;
     
        
-public Personnage(String unNom,int unpv, Armes unarmekip){
+public Personnage(String unNom,int unpv, Armes unarmekip, int unnbpersos){
     nom=unNom;
     pv=unpv;
     armekip=unarmekip;
+    nbpersos=unnbpersos;..unNom....unNom.....unNom...unNom..unNom....unNom.
      if (pv >100){
     System.out.println("tricheur");
     pv=2;

@@ -14,19 +14,18 @@ public class LightOff_LHERMET_version_consol {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        CelluleLumineuse l1 = new CelluleLumineuse(); 
+ 
+       GrilleDeCellules grille = new GrilleDeCellules(10, 10);
+       
 
-        CelluleLumineuse l2 = new CelluleLumineuse(); 
+       System.out.println(grille);
 
-       GrilleDeCellules grille = new GrilleDeCellules(7, 7);
+        Partie nouvelle_partis =new Partie();
+        nouvelle_partis.initialiserPartie();
 
-        grille.melangerMatriceAleatoirement(20);
-
-        System.out.println(grille);
-
-        Partie partie =new Partie();
-
-        partie.lancerPartie();
+        nouvelle_partis.lancerPartie();
+        
+        
         
     
     

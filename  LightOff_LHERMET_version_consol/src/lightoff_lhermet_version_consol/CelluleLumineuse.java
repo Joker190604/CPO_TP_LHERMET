@@ -12,18 +12,19 @@ public class CelluleLumineuse {
     private boolean etat;
     //Constructeur par défault pour initialiser l'état de la céllule à "éteinte"
     public CelluleLumineuse(){
-        etat=false;
        
     }
     //Méthode pour activer la Celulle
     public void activerCelulle(){
-        if (etat=false){
-        etat=true;
-        }
+        etat=!etat;
+        
     }
      //Méthode pour éteindre la Celulle
     public void eteindreCellule(){
-        etat=false;
+        if(etat==true){
+            etat= false;
+            
+        }
     }
     //Méthode pour savoir si la cellule est éteinte ou pas
     public boolean estEteint(){

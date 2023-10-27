@@ -22,83 +22,69 @@ public class Partie {
         }
         
         public void lancerPartie() {
-         Scanner scanner = new Scanner(System.in);
-         while (!grille.cellulesToutesEteintes()) {
-            System.out.println("Grille de jeu :");
-            System.out.println(grille);
-            System.out.println("Nombre de coups joués : " + nbCoups);
+           initialiserPartie();
 
-            // Demander au joueur de saisir un coup
-            System.out.println("Entrez la ligne, la colonne ou la diagonale à activer (ex: '2 3' ou 'd') :");
+        Scanner scanner = new Scanner(System.in);
+
+ 
+
+        System.out.println("Bienvenue dans le jeu LightOff!");
+
+ 
+
+        while (!grille.cellulesToutesEteintes()) {
+
+            System.out.println("Grille actuelle :");
+
+            System.out.println(grille);
+
+ 
+
+            System.out.println("Entrez un coup (L pour ligne, C pour colonne ou D pour diagonale) :");
+
+            String coup = scanner.nextLine();
             int nb = scanner.nextInt();
-            if (nb> 10) {
-                                  System.out.println("Coup invalide.");  
-            }
-String choix=scanner.nextLine();
+ 
+
             // Activer la ligne, la colonne ou la diagonale correspondante
-            if (nb == 1) {
-       
-                if (choix == "d") {
-                    grille.activerDiagonaleDescendante();
-                if (choix == "l") {
-                    grille.activerLigneDeCellules(1);
-                }
-                 if (choix == "c") {
-                    grille.activerColonneDeCellules(1);
-                }
-                } else {
-                    System.out.println("Coup invalide.");
-                }
-                 if (nb == 2) {
-       
-                if (choix == "d") {
-                    grille.activerDiagonaleMontante();
-                if (choix == "l") {
-                    grille.activerLigneDeCellules(2);
-                }
-                 if (choix == "c") {
-                    grille.activerColonneDeCellules(2);
-                }
-                } else {
-                    System.out.println("Coup invalide.");
-                }
-                if (nb == 2) {
-       
-                if (choix == "d") {
-                    grille.activerDiagonaleMontante();
-                if (choix == "l") {
-                    grille.activerLigneDeCellules(2);
-                }
-                 if (choix == "c") {
-                    grille.activerColonneDeCellules(2);
-                }
-                } else {
-                    System.out.println("Coup invalide.");
-                }
-                if (nb > 2) {
-       
-                   
-                if (choix == "l") {
-                    grille.activerLigneDeCellules(nb);
-                }
-                 if (choix == "c") {
-                    grille.activerColonneDeCellules(nb);
-                }
-                } else {
-                    System.out.println("Coup invalide.");
-                }
+
+            switch (coup) {
+
+                case "L":
+
+                    grille.activerLigneDeCellules(nb); // Par exemple, vous pouvez activer la première ligne
+
+                    break;
+
+                case "C":
+
+                    grille.activerColonneDeCellules(nb); // Par exemple, vous pouvez activer la première colonne
+
+                    break;
+
+                case "D":
+
+                    grille.activerDiagonaleDescendante(); // Par exemple, vous pouvez activer la diagonale descendante
+
+                    break;
+
+                default:
+
+                    System.out.println("Coup invalide. Veuillez entrer 'ligne', 'colonne' ou 'diagonale'.");
+
             }
 
             nbCoups++;
+            System.out.println("Nombre de coups : " + nbCoups);
         }
 
-        System.out.println("Bravo ! Vous avez éteint toutes les cellules en " + nbCoups + " coups.");
+ 
+
+        System.out.println("Toutes les cellules sont éteintes! Nombre de coups : " + nbCoups);
+
+        scanner.close();
+
     }
-       
-     
-       
-         }
-   }
         
       
        

@@ -9,9 +9,10 @@ package lightoff_lhermet_version_consol;
  * @author sacha
  */
 public class CelluleLumineuse {
-    private boolean etat=false;
+    private boolean etat;
     //Constructeur par défault pour initialiser l'état de la céllule à "éteinte"
     public CelluleLumineuse(){
+        etat=false;
        
     }
     //Méthode pour activer la Celulle

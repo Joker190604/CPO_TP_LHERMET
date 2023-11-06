@@ -12,8 +12,7 @@ import java.util.Random;
  * @author sacha
  */
 public class GrilleDeCellules {
-
-  CelluleLumineuse[][] matriceCellules = null;
+     CelluleLumineuse[][] matriceCellules = null;
   int nbLigne;
   int nbColonnes;
   public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
@@ -26,14 +25,36 @@ public class GrilleDeCellules {
             }
         }   
 }
+  public boolean VerifToutesLesCellulesEteintes() {
+
+   for (int ligne = 0; ligne < nbLigne; ligne++) {
+
+        for (int colonne = 0; colonne < nbColonnes; colonne++) {
+
+        if (matriceCellules[ligne][colonne].getEtat()==true) {
+
+            return false;
+        }
+        else{
+            return true;
+        }
+   
+
+            }
+        }
+    
+      return false;
+  }
   
-    public void eteindreToutesLesCellules() {
+  
+    public void eteindreToutesLesCellules(){
         for (int i = 0; i < nbLigne; i++) {
             for (int j = 0; j < nbColonnes; j++) {
                 matriceCellules[i][j].eteindreCellule();
             }
         }
     }
+
        public void activerLigneColonneOuDiagonaleAleatoire(){
      Random generateurAleat = new Random();
         int n = generateurAleat.nextInt(100);
@@ -139,3 +160,6 @@ public void activerDiagonaleMontante() {
 
 }
 
+
+
+  
